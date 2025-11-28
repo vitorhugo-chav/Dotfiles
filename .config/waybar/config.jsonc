@@ -1,0 +1,174 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+  "spacing": 0,
+  "reload_style_on_change": true, // Recarrega CSS automaticamente ao salvar
+
+  // Módulos da Esquerda
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "tray",
+    "hyprland/window"
+  ],
+
+  // Módulos do Centro
+  "modules-center": [
+    "clock"
+  ],
+
+  // Módulos da Direita (Player + Hardware + Notificações)
+  "modules-right": [
+    "mpris",
+    "group/hardware",
+    "custom/swaync"
+  ],
+
+  // --- GRUPOS ---
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+      "pulseaudio",
+      "battery"
+    ]
+  },
+
+  // --- CONFIGURAÇÃO DOS MÓDULOS ---
+
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "format-icons": {
+      "active": "󰮯",
+      "default": "󰊠",
+      "empty": "",
+      "urgent": ""
+    },
+    // [FIX] Define manualmente apenas as 5 primeiras
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+
+  "hyprland/window": {
+    "format": "  {title}",
+    "max-length": 40, // Aumentei um pouco para ler melhor títulos de abas
+    "separate-outputs": true
+  },
+
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "max-length": 25, 
+    "player-icons": {
+      "default": "▶",
+      "spotify": "",
+      "firefox": "",
+      "chromium": ""
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+    // Comandos do Playerctl
+    "on-click": "playerctl previous",
+    "on-click-middle": "playerctl play-pause",
+    "on-click-right": "playerctl next"
+  },
+
+  "clock": {
+    "format": "{:%H:%M   %d/%m}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#82aaff'><b>{}</b></span>",
+        "days": "<span color='#c8d3f5'><b>{}</b></span>",
+        "weeks": "<span color='#c3e88d'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffc777'><b>{}</b></span>",
+        "today": "<span color='#ff757f'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode"
+    }
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰣼 ",
+    "tooltip-format": "{ipaddr} - {essid}",
+    // Abre nmtui flutuante
+    "on-click": "hyprctl dispatch exec '[float; size 512 512; center] kitty nmtui'"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    // Abre pavucontrol flutuante
+    "on-click-right": "hyprctl dispatch exec '[float; size 800 512; center] pavucontrol'"
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "custom/swaync": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󰂛",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰂛"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+    "show-passive-items": true
+  }
+}

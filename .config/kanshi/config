@@ -1,0 +1,10 @@
+# Perfil 1: Só o notebook (quando você tá na rua)
+profile {
+    output eDP-1 enable
+}
+
+# Perfil 2: Modo Desktop (quando conecta o monitor externo)
+profile {
+    output HDMI-A-1 enable
+    output eDP-1 disable
+}

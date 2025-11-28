@@ -1,0 +1,237 @@
+/* =============================================================================
+   TOKYO NIGHT SWAYNC THEME
+   ============================================================================= */
+
+* {
+  font-family: "JetBrains Mono Nerd Font";
+  font-weight: bold;
+}
+
+/* --- JANELA PRINCIPAL --- */
+.control-center {
+  background: rgba(26, 27, 38, 0.90); /* Tokyo Night BG com Transparência */
+  border: 2px solid #82aaff; /* Tokyo Blue */
+  color: #c8d3f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.4); 
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  opacity: 0.5;
+}
+
+/* --- TÍTULO E BOTÃO LIMPAR --- */
+.widget-title {
+  color: #82aaff;
+  background: #222436; /* Fundo levemente mais claro */
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #2f334d;
+}
+
+.widget-title > button {
+  font-size: 0.85rem;
+  color: #ff757f; /* Tokyo Red */
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid #ff757f;
+  padding: 4px 12px;
+  transition: all 0.2s ease;
+}
+
+.widget-title > button:hover {
+  background: #ff757f;
+  color: #1a1b26;
+}
+
+/* --- NOTIFICAÇÕES INDIVIDUAIS --- */
+.notification-row {
+    outline: none;
+    margin: 5px; /* Espaço entre notificações */
+}
+
+.notification-row:focus,
+.notification-row:hover {
+    background: transparent; /* Remove highlight padrão feio do GTK */
+}
+
+.notification {
+  border-radius: 10px;
+  margin: 5px 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.notification-content {
+  background: #222436; /* Fundo do card da notificação */
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #2f334d;
+  margin: 0;
+}
+
+.close-button {
+  background: #ff757f;
+  color: #1a1b26;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  background: #ffc777; /* Amarelo no hover */
+  color: #000;
+}
+
+/* Texto da Notificação */
+.summary {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #82aaff;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: #565f89;
+  margin-right: 18px;
+}
+
+.body {
+  font-size: 0.9rem;
+  color: #c8d3f5;
+}
+
+/* Prioridades (Bordas Coloridas) */
+.low { border: 2px solid #82aaff; }
+.normal { border: 2px solid #c099ff; }
+.critical { border: 2px solid #ff757f; }
+
+/* --- WIDGETS (DND, MPRIS, ETC) --- */
+.widget-dnd {
+  background: #222436;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #2f334d;
+}
+
+.widget-dnd > label {
+  color: #82aaff;
+  font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+  border-radius: 12px;
+  border: 1px solid #565f89;
+  background: #565f89;
+}
+
+.widget-dnd > switch:checked {
+  background: #82aaff;
+  border: 1px solid #82aaff;
+}
+
+/* --- BOTÕES GRID (Quick & Power) --- */
+.widget-buttons-grid {
+  font-size: 22px;
+  color: #82aaff;
+  background: transparent;
+  padding: 5px; 
+  margin: 5px 10px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: #222436;
+  color: #82aaff;
+  margin: 4px;
+  border-radius: 10px;
+  border: 1px solid #2f334d;
+  transition: all 0.2s ease;
+  min-width: 75px;  
+  min-height: 55px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: #82aaff;
+  color: #1a1b26;
+  border-color: #82aaff;
+}
+
+/* --- MPRIS (Player) --- */
+.widget-mpris {
+  background: #222436;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  border: 1px solid #2f334d;
+  color: #c8d3f5;
+}
+
+.widget-mpris-title {
+  color: #82aaff;
+  font-size: 1.1rem;
+}
+
+.widget-mpris-subtitle {
+  color: #c099ff;
+  font-size: 0.9rem;
+}
+
+/* --- VOLUME & BACKLIGHT --- */
+.widget-volume, 
+.widget-backlight {
+  background: #222436;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #c8d3f5;
+  border: 1px solid #2f334d;
+}
+
+.widget-volume label,
+.widget-backlight label {
+    color: #82aaff;
+    margin-right: 10px;
+}
+
+/* Barra de progresso (Sliders) */
+trough {
+    background: #1a1b26;
+    border-radius: 10px;
+    border: 1px solid #2f334d;
+    min-height: 10px;
+}
+
+highlight {
+    background: #82aaff;
+    border-radius: 10px;
+}
+
+/* Botão Per-App (Volume) */
+.widget-volume > box > button {
+  background: #1a1b26;
+  color: #82aaff;
+  border: 1px solid #82aaff;
+  border-radius: 50%; 
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+.widget-volume > box > button:hover {
+    background: #82aaff;
+    color: #1a1b26;
+}

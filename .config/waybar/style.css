@@ -1,0 +1,201 @@
+/* =============================================================================
+   TOKYO NIGHT WAYBAR THEME
+   ============================================================================= */
+
+/* Reset Global */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Tooltip */
+tooltip {
+    background: #1e2030;
+    border-radius: 10px;
+    border: 1px solid #82aaff;
+}
+tooltip label {
+    color: #c8d3f5;
+}
+
+/* --- MÓDULOS COM FUNDO (AS ILHAS) --- */
+#workspaces,
+#clock,
+#custom-swaync,
+#mpris {
+    background-color: #222436;
+    color: #c8d3f5;
+    padding: 4px 15px;
+    border-radius: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border: 1px solid #2f334d;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects para as Ilhas */
+#clock:hover,
+#custom-swaync:hover,
+#mpris:hover {
+    background-color: #2f334d;
+    border-color: #82aaff;
+    color: #82aaff;
+}
+
+/* --- MÓDULOS TRANSPARENTES (Launcher e Tray) --- */
+#custom-launcher {
+    background-color: transparent;
+    color: #82aaff; 
+    font-size: 22px; 
+    padding: 2px 10px;
+    margin: 4px 0 4px 5px;
+}
+#custom-launcher:hover {
+    color: #c099ff; /* Efeito hover no ícone do Arch */
+}
+
+#tray {
+    background-color: transparent;
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #ff757f;
+}
+
+/* --- PLAYER (MPRIS) --- */
+#mpris {
+    color: #c099ff;
+    margin: 4px 6px; 
+}
+#mpris.paused {
+    color: #545c7e; 
+}
+
+/* --- GRUPO DE HARDWARE (PÍLULA) --- */
+/* Estilo base para os itens dentro do grupo */
+#network, #pulseaudio, #battery {
+    background-color: #222436;
+    color: #c8d3f5;
+    padding: 4px 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-top: 1px solid #2f334d;
+    border-bottom: 1px solid #2f334d;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover no hardware */
+#network:hover, #pulseaudio:hover, #battery:hover {
+    background-color: #2f334d;
+    color: #fff;
+}
+
+/* Lado Esquerdo da Pílula (Network) */
+#network {
+    border-radius: 12px 0 0 12px;
+    border-left: 1px solid #2f334d;
+    padding-left: 15px;
+    margin-right: 0;
+}
+
+/* Meio da Pílula (Audio) */
+#pulseaudio {
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-left: none;
+    border-right: none;
+}
+
+/* Lado Direito da Pílula (Battery) */
+#battery {
+    border-radius: 0 12px 12px 0;
+    border-right: 1px solid #2f334d;
+    padding-right: 15px;
+    margin-left: 0;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 6px;
+    color: #545c7e;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #82aaff;
+    background-color: #2f334d; /* Destaque leve no fundo do workspace ativo */
+    min-width: 30px; /* Workspace ativo fica um pouco mais largo */
+}
+
+#workspaces button.urgent {
+    color: #ff757f;
+}
+
+#workspaces button:hover {
+    background: rgba(130, 170, 255, 0.2);
+    color: #c099ff;
+}
+
+/* Janela Ativa */
+#window {
+    background: transparent;
+    color: #c099ff;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Relógio */
+#clock {
+    color: #86e1fc;
+    font-weight: bold;
+}
+
+/* Cores Específicas dos Ícones */
+#network { color: #c3e88d; }
+#network.disconnected { color: #ff757f; }
+
+#pulseaudio { color: #fca7ea; }
+#pulseaudio.muted { color: #545c7e; }
+
+#battery { color: #c8d3f5; }
+#battery.charging, #battery.plugged { color: #c3e88d; }
+#battery.warning:not(.charging) { color: #ffc777; }
+#battery.critical:not(.charging) {
+    color: #ff757f;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to { color: #ffffff; }
+}
+
+/* Notificações (SwayNC) */
+#custom-swaync {
+    color: #82aaff;
+    padding: 4px 12px;
+    margin-right: 5px;
+    font-size: 16px;
+}

@@ -1,0 +1,90 @@
+/* =============================================================================
+   TOKYO NIGHT WAYPAPER THEME (CORRIGIDO)
+   ============================================================================= */
+
+@define-color bg_color rgba(26, 27, 38, 0.95);
+@define-color fg_color #c0caf5;
+@define-color base_color #24283b;
+@define-color accent_color #7aa2f7;
+@define-color hover_color #2f334d;
+@define-color border_color #414868;
+
+/* Janela Principal */
+window {
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
+/* Inputs e Caixas de Texto */
+entry {
+    background-color: @base_color;
+    color: @fg_color;
+    border: 1px solid @border_color;
+    border-radius: 8px;
+    padding: 6px;
+    caret-color: @accent_color;
+}
+
+entry:focus {
+    border-color: @accent_color;
+    box-shadow: 0 0 0 1px @accent_color;
+}
+
+/* Botões */
+button {
+    background-color: @base_color;
+    color: @fg_color;
+    border: 1px solid @border_color;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 4px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: @accent_color;
+    color: #1a1b26;
+    border-color: @accent_color;
+}
+
+/* [CORRIGIDO] Removido o 'transform' que crashava o app */
+button:active {
+    background-color: shade(@accent_color, 0.8);
+}
+
+button:disabled {
+    opacity: 0.4;
+    background-color: @base_color;
+    border-color: transparent;
+}
+
+/* Grid de Imagens */
+flowboxchild {
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 4px;
+    transition: all 0.2s;
+}
+
+flowboxchild:hover {
+    background-color: @hover_color;
+}
+
+flowboxchild:selected {
+    background-color: @accent_color;
+    color: #1a1b26;
+    outline: none;
+}
+
+/* Barra de Rolagem */
+scrollbar slider {
+    background-color: @border_color;
+    min-width: 6px;
+    min-height: 6px;
+    border-radius: 10px;
+}
+
+scrollbar slider:hover {
+    background-color: @accent_color;
+}

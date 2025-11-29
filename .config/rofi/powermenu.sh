@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 
-# Configuração de tema
+# Theme configuration
 theme="$HOME/.config/rofi/powermenu.rasi"
 
-# Opções com ícones (Nerd Fonts)
-shutdown=" Desligar"
-reboot=" Reiniciar"
-lock=" Bloquear"
-suspend=" Suspender"
-logout=" Sair (Logout)"
+# Options with icons (Nerd Fonts)
+shutdown=" Shutdown"
+reboot=" Reboot"
+lock=" Lock"
+suspend=" Suspend"
+logout=" Logout"
 
-# Confirmação
-yes=' Sim'
-no=' Não'
+# Confirmation
+yes=' Yes'
+no=' No'
 
-# Monta a lista de opções
+# Build the options list
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
-# Abre o Rofi e captura a escolha
-chosen="$(echo -e "$options" | rofi -dmenu -p "Sessão" -theme "${theme}")"
+# Open Rofi and capture the choice
+chosen="$(echo -e "$options" | rofi -dmenu -p "Session" -theme "${theme}")"
 
-# Lógica de execução
+# Execution logic
 case ${chosen} in
     $shutdown)
         systemctl poweroff
@@ -29,7 +29,7 @@ case ${chosen} in
         systemctl reboot
         ;;
     $lock)
-        # Ajuste aqui para seu locker (hyprlock ou swaylock)
+        # Adjust here for your locker (hyprlock or swaylock)
         hyprlock || swaylock
         ;;
     $suspend)

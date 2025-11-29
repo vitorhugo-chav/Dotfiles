@@ -39,12 +39,12 @@
     ],
     "widget-config": {
         "title": {
-            "text": "Central de Controle",
+            "text": "Control Center",
             "clear-all-button": true,
-            "button-text": "Limpar Tudo"
+            "button-text": "Clear All"
         },
         "dnd": {
-            "text": "Não Perturbe"
+            "text": "Do Not Disturb"
         },
         "mpris": {
             "image-size": 90,

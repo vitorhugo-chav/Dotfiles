@@ -1,50 +1,50 @@
 if status is-interactive
-    # Desativa a mensagem de boas-vindas padrão do Fish
+    # Disable the default Fish welcome message
     set fish_greeting
 
-    # --- INICIALIZAÇÕES DE FERRAMENTAS ---
-    # Inicia o Oh-My-Posh com o tema Tokyo Night
+    # --- TOOL INITIALIZATIONS ---
+    # Start Oh-My-Posh with the Tokyo Night theme
     oh-my-posh init fish --config ~/.config/oh-my-posh/tokyonight.omp.json | source
     
-    # Inicia o zoxide
+    # Start zoxide
     zoxide init fish | source
     pokemon-colorscripts -r --no-title > /tmp/pokemon_logo
     fastfetch --config ~/.config/fastfetch/minimal-pokemon.jsonc --logo /tmp/pokemon_logo --logo-type file-raw
 
-    # --- ALIASES GERAIS ---
-    # SSH via Kitty (copia configs de terminal)
+    # --- GENERAL ALIASES ---
+    # SSH via Kitty (copies terminal configs)
     #alias ssh="kitten ssh"
     
-    # Navegação (Zoxide)
+    # Navigation (Zoxide)
     alias cd="z"
 
-    # Listagem de Arquivos (Eza)
+    # File Listing (Eza)
     alias ls="eza --icons"
     alias ll="eza -la --icons --git"
-    alias lt="eza --tree --icons"       # Corrigido de 'alisa' para 'alias'
+    alias lt="eza --tree --icons"       # Corrected from 'alisa' to 'alias'
     alias lta="eza -a --tree --icons"
 
-    # Leitura de Arquivos (Bat)
+    # File Reading (Bat)
     alias cat="bat"
     
     alias mdb="mariadb -u devuser -p"
 
-    # --- VARIÁVEIS DE AMBIENTE ---
-    # Tema do Bat (lembre-se de ter baixado o tema como falamos antes)
+    # --- ENVIRONMENT VARIABLES ---
+    # Bat theme (remember to have downloaded the theme as we discussed before)
     set -gx BAT_THEME "tokyonight_moon"
 
-    # --- FZF (BUSCADOR FUZZY) ---
-    # Usa 'fd' para buscar arquivos (mais rápido e ignora .git)
+    # --- FZF (FUZZY FINDER) ---
+    # Use 'fd' to find files (faster and ignores .git)
     set -gx FZF_DEFAULT_COMMAND "fd --type f"
 
-    # Cores do FZF combinando com Tokyo Night
+    # FZF colors matching Tokyo Night
     set -gx FZF_DEFAULT_OPTS "\
     --height 40% --layout=reverse --border \
     --color=bg+:#2d3f76,bg:#1e2030,spinner:#ff966c,hl:#ff757f \
     --color=fg:#c8d3f5,header:#ff966c,info:#82aaff,pointer:#ff757f \
     --color=marker:#ff007c,fg+:#c8d3f5,prompt:#c099ff,hl+:#ff757f"
 
-    # Bindings do plugin fzf.fish (Ctrl+F arquivos, Ctrl+R histórico, Ctrl+Alt+S git)
-    # Se der erro aqui, é porque faltou instalar o plugin: fisher install patrickf1/fzf.fish
+    # fzf.fish plugin bindings (Ctrl+F files, Ctrl+R history, Ctrl+Alt+S git)
+    # If there's an error here, it's because the plugin is missing: fisher install patrickf1/fzf.fish
     fzf_configure_bindings --directory=\cf --git_status=\e\cs --history=\cr
 end

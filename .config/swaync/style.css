@@ -7,9 +7,9 @@
   font-weight: bold;
 }
 
-/* --- JANELA PRINCIPAL --- */
+/* --- MAIN WINDOW --- */
 .control-center {
-  background: rgba(26, 27, 38, 0.90); /* Tokyo Night BG com Transparência */
+  background: rgba(26, 27, 38, 0.90); /* Tokyo Night BG with Transparency */
   border: 2px solid #82aaff; /* Tokyo Blue */
   color: #c8d3f5;
   border-radius: 12px;
@@ -24,10 +24,10 @@
   opacity: 0.5;
 }
 
-/* --- TÍTULO E BOTÃO LIMPAR --- */
+/* --- TITLE AND CLEAR BUTTON --- */
 .widget-title {
   color: #82aaff;
-  background: #222436; /* Fundo levemente mais claro */
+  background: #222436; /* Slightly lighter background */
   padding: 5px 10px;
   margin: 10px;
   font-size: 1.2rem;
@@ -50,15 +50,15 @@
   color: #1a1b26;
 }
 
-/* --- NOTIFICAÇÕES INDIVIDUAIS --- */
+/* --- INDIVIDUAL NOTIFICATIONS --- */
 .notification-row {
     outline: none;
-    margin: 5px; /* Espaço entre notificações */
+    margin: 5px; /* Space between notifications */
 }
 
 .notification-row:focus,
 .notification-row:hover {
-    background: transparent; /* Remove highlight padrão feio do GTK */
+    background: transparent; /* Remove ugly default GTK highlight */
 }
 
 .notification {
@@ -69,7 +69,7 @@
 }
 
 .notification-content {
-  background: #222436; /* Fundo do card da notificação */
+  background: #222436; /* Notification card background */
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #2f334d;
@@ -91,11 +91,11 @@
 }
 
 .close-button:hover {
-  background: #ffc777; /* Amarelo no hover */
+  background: #ffc777; /* Yellow on hover */
   color: #000;
 }
 
-/* Texto da Notificação */
+/* Notification Text */
 .summary {
   font-size: 1rem;
   font-weight: 800;
@@ -113,7 +113,7 @@
   color: #c8d3f5;
 }
 
-/* Prioridades (Bordas Coloridas) */
+/* Priorities (Colored Borders) */
 .low { border: 2px solid #82aaff; }
 .normal { border: 2px solid #c099ff; }
 .critical { border: 2px solid #ff757f; }
@@ -143,7 +143,7 @@
   border: 1px solid #82aaff;
 }
 
-/* --- BOTÕES GRID (Quick & Power) --- */
+/* --- GRID BUTTONS (Quick & Power) --- */
 .widget-buttons-grid {
   font-size: 22px;
   color: #82aaff;
@@ -207,7 +207,7 @@
     margin-right: 10px;
 }
 
-/* Barra de progresso (Sliders) */
+/* Progress bar (Sliders) */
 trough {
     background: #1a1b26;
     border-radius: 10px;
@@ -220,7 +220,7 @@ highlight {
     border-radius: 10px;
 }
 
-/* Botão Per-App (Volume) */
+/* Per-App Button (Volume) */
 .widget-volume > box > button {
   background: #1a1b26;
   color: #82aaff;

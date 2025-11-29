@@ -114,7 +114,7 @@ element normal.normal {
 }
 element selected.normal {
     background-color:            @selected;
-    text-color:                  @background; /* Inverte a cor para leitura fácil */
+    text-color:                  @background; /* Invert color for easy reading */
 }
 element-text {
     background-color:            transparent;

@@ -8,7 +8,7 @@ configuration {
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
     
-    /* Fonte ajustada para 1440p */
+    /* Font adjusted for 1440p */
     font:                       "JetBrainsMono Nerd Font Bold 12";
 }
 
@@ -21,7 +21,7 @@ configuration {
     selected:       #7aa2f7;
     active:         #9ece6a;
     urgent:         #f7768e;
-    border:         #7aa2f7; /* Azul Tokyo Night na borda */
+    border:         #7aa2f7; /* Tokyo Night blue on the border */
 }
 
 /*****----- Main Window -----*****/
@@ -37,7 +37,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               12px; /* Combinando com o Hyprland */
+    border-radius:               12px; /* Matching Hyprland */
     border-color:                @border;
     cursor:                      "default";
     background-color:            @background;
@@ -61,7 +61,7 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     20px; /* Reduzi pra ficar mais sleek */
+    padding:                     20px; /* Reduced for a sleeker look */
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
@@ -89,7 +89,7 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Pesquisar...";
+    placeholder:                 "Search...";
     placeholder-color:           inherit;
 }
 
@@ -130,7 +130,7 @@ element {
     cursor:                      pointer;
 }
 
-/* Mantendo a transparência nos itens não selecionados */
+/* Keeping transparency in unselected items */
 element normal.normal,
 element alternate.normal {
     background-color:            transparent;
@@ -151,7 +151,7 @@ element selected.active {
     text-color:                  @background;
 }
 
-/* Destaque Azul no Selecionado */
+/* Blue highlight on selected */
 element selected.normal {
     background-color:            @selected;
     text-color:                  @background;

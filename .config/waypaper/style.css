@@ -1,5 +1,5 @@
 /* =============================================================================
-   TOKYO NIGHT WAYPAPER THEME (CORRIGIDO)
+   TOKYO NIGHT WAYPAPER THEME (FIXED)
    ============================================================================= */
 
 @define-color bg_color rgba(26, 27, 38, 0.95);
@@ -9,13 +9,13 @@
 @define-color hover_color #2f334d;
 @define-color border_color #414868;
 
-/* Janela Principal */
+/* Main Window */
 window {
     background-color: @bg_color;
     color: @fg_color;
 }
 
-/* Inputs e Caixas de Texto */
+/* Inputs and Text Boxes */
 entry {
     background-color: @base_color;
     color: @fg_color;
@@ -30,7 +30,7 @@ entry:focus {
     box-shadow: 0 0 0 1px @accent_color;
 }
 
-/* Botões */
+/* Buttons */
 button {
     background-color: @base_color;
     color: @fg_color;
@@ -48,7 +48,7 @@ button:hover {
     border-color: @accent_color;
 }
 
-/* [CORRIGIDO] Removido o 'transform' que crashava o app */
+/* [FIXED] Removed the 'transform' that crashed the app */
 button:active {
     background-color: shade(@accent_color, 0.8);
 }
@@ -59,7 +59,7 @@ button:disabled {
     border-color: transparent;
 }
 
-/* Grid de Imagens */
+/* Image Grid */
 flowboxchild {
     background-color: transparent;
     border-radius: 12px;
@@ -77,7 +77,7 @@ flowboxchild:selected {
     outline: none;
 }
 
-/* Barra de Rolagem */
+/* Scrollbar */
 scrollbar slider {
     background-color: @border_color;
     min-width: 6px;

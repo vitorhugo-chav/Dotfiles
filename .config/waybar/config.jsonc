@@ -5,9 +5,9 @@
   "margin-left": 10,
   "margin-right": 10,
   "spacing": 0,
-  "reload_style_on_change": true, // Recarrega CSS automaticamente ao salvar
+  "reload_style_on_change": true, // Reload CSS automatically on save
 
-  // Módulos da Esquerda
+  // Left Modules
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
@@ -15,19 +15,19 @@
     "hyprland/window"
   ],
 
-  // Módulos do Centro
+  // Center Modules
   "modules-center": [
     "clock"
   ],
 
-  // Módulos da Direita (Player + Hardware + Notificações)
+  // Right Modules (Player + Hardware + Notifications)
   "modules-right": [
     "mpris",
     "group/hardware",
     "custom/swaync"
   ],
 
-  // --- GRUPOS ---
+  // --- GROUPS ---
   "group/hardware": {
     "orientation": "horizontal",
     "modules": [
@@ -37,7 +37,7 @@
     ]
   },
 
-  // --- CONFIGURAÇÃO DOS MÓDULOS ---
+  // --- MODULE CONFIGURATION ---
 
   "custom/launcher": {
     "format": " ",
@@ -55,7 +55,7 @@
       "empty": "",
       "urgent": ""
     },
-    // [FIX] Define manualmente apenas as 5 primeiras
+    // [FIX] Manually define only the first 5
     "persistent-workspaces": {
       "1": [],
       "2": [],
@@ -67,7 +67,7 @@
 
   "hyprland/window": {
     "format": "  {title}",
-    "max-length": 40, // Aumentei um pouco para ler melhor títulos de abas
+    "max-length": 40, // Increased a bit to better read tab titles
     "separate-outputs": true
   },
 
@@ -84,7 +84,7 @@
     "status-icons": {
       "paused": "⏸"
     },
-    // Comandos do Playerctl
+    // Playerctl commands
     "on-click": "playerctl previous",
     "on-click-middle": "playerctl play-pause",
     "on-click-right": "playerctl next"
@@ -117,7 +117,7 @@
     "format-ethernet": "󰈀 ",
     "format-disconnected": "󰣼 ",
     "tooltip-format": "{ipaddr} - {essid}",
-    // Abre nmtui flutuante
+    // Open floating nmtui
     "on-click": "hyprctl dispatch exec '[float; size 512 512; center] kitty nmtui'"
   },
 
@@ -128,7 +128,7 @@
       "default": ["", "", ""]
     },
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    // Abre pavucontrol flutuante
+    // Open floating pavucontrol
     "on-click-right": "hyprctl dispatch exec '[float; size 800 512; center] pavucontrol'"
   },
 

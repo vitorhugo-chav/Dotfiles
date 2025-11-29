@@ -1,8 +1,8 @@
 # ~/.config/zathura/zathurarc
-# Configuração completa: Tokyo Night Light + Tweaks de Usabilidade
+# Full Configuration: Tokyo Night Light + Usability Tweaks
 
 # ------------------------------------------------------------------------------
-# TEMA: Tokyo Night (Day / Light)
+# THEME: Tokyo Night (Day / Light)
 # ------------------------------------------------------------------------------
 set default-bg "#e1e2e7"
 set default-fg "#3760bf"
@@ -31,41 +31,41 @@ set completion-fg "#3760bf"
 set completion-highlight-fg "#3760bf"
 set completion-highlight-bg "#a8aecb"
 
-# Garante que não vai inverter as cores (mantém fundo branco)
+# Ensures colors are not inverted (keeps white background)
 set recolor "false"
 
 # ------------------------------------------------------------------------------
-# COMPORTAMENTO
+# BEHAVIOR
 # ------------------------------------------------------------------------------
 
-# Copia seleção para o clipboard do sistema (Ctrl+C / Ctrl+V fora)
+# Copy selection to the system clipboard (Ctrl+C / Ctrl+V outside)
 set selection-clipboard clipboard
 
-# Abre o PDF já ajustado na largura da janela (melhor leitura)
+# Opens the PDF already adjusted to the window width (better reading)
 set adjust-open "width"
 
-# Passo do scroll mais rápido (padrão é muito lento)
+# Faster scroll step (default is too slow)
 set scroll-step 100
 
-# Zoom mais suave
+# Smoother zoom
 set zoom-step 10
 
-# Recarrega o arquivo se ele for alterado no disco
+# Reload the file if it is changed on disk
 set file-monitor "signal"
 
 # ------------------------------------------------------------------------------
-# INTERFACE (Minimalista para Hyprland)
+# INTERFACE (Minimalist for Hyprland)
 # ------------------------------------------------------------------------------
 
-# Esconde as barras de rolagem laterais e inferiores
+# Hide side and bottom scrollbars
 set scrollbars "false"
 
-# Mostra apenas a barra de status embaixo ('s'). 
-# Se quiser sumir com tudo, mude para "none"
+# Show only the status bar at the bottom ('s'). 
+# If you want to hide everything, change to "none"
 set guioptions "s"
 
-# Mostra '~' em vez do caminho completo da home
+# Show '~' instead of the full home path
 set statusbar-home-tilde "true"
 
-# Define o título da janela (útil para regras de janela no Hyprland)
+# Set the window title (useful for window rules in Hyprland)
 set window-title-basename "true"

@@ -26,7 +26,7 @@ tooltip label {
     color: #c8d3f5;
 }
 
-/* --- MÓDULOS COM FUNDO (AS ILHAS) --- */
+/* --- MODULES WITH BACKGROUND (THE ISLANDS) --- */
 #workspaces,
 #clock,
 #custom-swaync,
@@ -43,7 +43,7 @@ tooltip label {
     transition: all 0.3s ease;
 }
 
-/* Hover Effects para as Ilhas */
+/* Hover Effects for the Islands */
 #clock:hover,
 #custom-swaync:hover,
 #mpris:hover {
@@ -52,7 +52,7 @@ tooltip label {
     color: #82aaff;
 }
 
-/* --- MÓDULOS TRANSPARENTES (Launcher e Tray) --- */
+/* --- TRANSPARENT MODULES (Launcher and Tray) --- */
 #custom-launcher {
     background-color: transparent;
     color: #82aaff; 
@@ -61,7 +61,7 @@ tooltip label {
     margin: 4px 0 4px 5px;
 }
 #custom-launcher:hover {
-    color: #c099ff; /* Efeito hover no ícone do Arch */
+    color: #c099ff; /* Hover effect on the Arch icon */
 }
 
 #tray {
@@ -88,8 +88,8 @@ tooltip label {
     color: #545c7e; 
 }
 
-/* --- GRUPO DE HARDWARE (PÍLULA) --- */
-/* Estilo base para os itens dentro do grupo */
+/* --- HARDWARE GROUP (PILL) --- */
+/* Base style for items inside the group */
 #network, #pulseaudio, #battery {
     background-color: #222436;
     color: #c8d3f5;
@@ -101,13 +101,13 @@ tooltip label {
     transition: background-color 0.3s ease;
 }
 
-/* Hover no hardware */
+/* Hover on hardware */
 #network:hover, #pulseaudio:hover, #battery:hover {
     background-color: #2f334d;
     color: #fff;
 }
 
-/* Lado Esquerdo da Pílula (Network) */
+/* Left side of the Pill (Network) */
 #network {
     border-radius: 12px 0 0 12px;
     border-left: 1px solid #2f334d;
@@ -115,7 +115,7 @@ tooltip label {
     margin-right: 0;
 }
 
-/* Meio da Pílula (Audio) */
+/* Middle of the Pill (Audio) */
 #pulseaudio {
     border-radius: 0;
     margin-left: 0;
@@ -124,7 +124,7 @@ tooltip label {
     border-right: none;
 }
 
-/* Lado Direito da Pílula (Battery) */
+/* Right side of the Pill (Battery) */
 #battery {
     border-radius: 0 12px 12px 0;
     border-right: 1px solid #2f334d;
@@ -142,8 +142,8 @@ tooltip label {
 
 #workspaces button.active {
     color: #82aaff;
-    background-color: #2f334d; /* Destaque leve no fundo do workspace ativo */
-    min-width: 30px; /* Workspace ativo fica um pouco mais largo */
+    background-color: #2f334d; /* Light highlight on the active workspace background */
+    min-width: 30px; /* Active workspace is a little wider */
 }
 
 #workspaces button.urgent {
@@ -155,7 +155,7 @@ tooltip label {
     color: #c099ff;
 }
 
-/* Janela Ativa */
+/* Active Window */
 #window {
     background: transparent;
     color: #c099ff;
@@ -164,13 +164,13 @@ tooltip label {
     font-weight: bold;
 }
 
-/* Relógio */
+/* Clock */
 #clock {
     color: #86e1fc;
     font-weight: bold;
 }
 
-/* Cores Específicas dos Ícones */
+/* Specific Icon Colors */
 #network { color: #c3e88d; }
 #network.disconnected { color: #ff757f; }
 
@@ -192,7 +192,7 @@ tooltip label {
     to { color: #ffffff; }
 }
 
-/* Notificações (SwayNC) */
+/* Notifications (SwayNC) */
 #custom-swaync {
     color: #82aaff;
     padding: 4px 12px;
